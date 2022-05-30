@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { BsSearch } from 'react-icons/bs'; 
 
 export const WeatherForm = ({ onChangeCity }) => {
   const [ city, setCity ] = useState('');
@@ -19,8 +20,10 @@ export const WeatherForm = ({ onChangeCity }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" id='search' onChange={handleChange} />
-      <label htmlFor='search'>buscar</label>
+      <div className='input-container'>
+      <input type="text" id='search' className='search' placeholder='Ingresa la ciudad' onChange={handleChange} />
+      <label htmlFor='search' className='search-icon'><BsSearch /></label>
+      </div>
     </form>
   )
 }
