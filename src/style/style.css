@@ -1,4 +1,6 @@
-html{
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Kumbh+Sans:wght@400;700&family=Mochiy+Pop+P+One&family=Pacifico&family=Red+Hat+Display:wght@500;700;900&family=Roboto+Condensed:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,500;1,400&family=Rubik+Beastly&family=Rubik:wght@400;500&family=Shadows+Into+Light&family=Source+Code+Pro&display=swap");
+
+html {
   box-sizing: border-box;
 }
 
@@ -8,9 +10,13 @@ html{
   box-sizing: inherit;
 }
 
-body{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #92c3ec;
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  /* Created with https://www.css-gradient.com */
+  background: #f29726;
+  background: -webkit-linear-gradient(right, #f29726, #378cc3);
+  background: -moz-linear-gradient(right, #f29726, #378cc3);
+  background: linear-gradient(to left, #f29726, #378cc3);
   padding: 0px;
 }
 
@@ -19,14 +25,27 @@ body{
 .weatherContainer {
   width: 500px;
   height: 500px;
-  margin: 150px auto;
+  margin: 100px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
 }
 
 form {
   margin: 10px 0;
 }
 
-.search{
+input {
+  /* Created with https://www.css-gradient.com */
+  background: #f29726;
+  background: -webkit-linear-gradient(top, #f29726, #378cc3);
+  background: -moz-linear-gradient(top, #f29726, #378cc3);
+  background: linear-gradient(to bottom, #f29726, #378cc3);
+}
+
+.search {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -35,3 +54,86 @@ form {
   border-radius: 3px;
 }
 
+.mainInfo {
+  /* Created with https://www.css-gradient.com */
+  background: #f29726;
+  background: -webkit-linear-gradient(bottom, #f29726, #378cc3);
+  background: -moz-linear-gradient(bottom, #f29726, #378cc3);
+  background: linear-gradient(to top, #f29726, #378cc3);
+  padding: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.cityName {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.country {
+  font-size: 20px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.condition {
+  font-size: 24px;
+}
+
+.current {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+/* Loading */
+
+.loading-container {
+  width: 500px;
+  height: 634px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #3d8cbd;
+  border-radius: 5px;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  /* Created with https://www.css-gradient.com */
+  background: #b85953;
+  background: -webkit-linear-gradient(left, #b85953, #1d7a18);
+  background: -moz-linear-gradient(left, #b85953, #1d7a18);
+  background: linear-gradient(to right, #b85953, #1d7a18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  animation: rotation 0.9s linear infinite;
+}
+
+.loader div {
+  background-color: #b5bcc0;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(358deg);
+  }
+}
