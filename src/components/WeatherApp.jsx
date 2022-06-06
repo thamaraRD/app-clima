@@ -11,9 +11,7 @@ export const WeatherApp = () => {
   }, []);
 
   const loadCity = async (city = "caracas") => {
-    console.log(
-      `${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_KEY}&q=${city}`
-    );
+    
     try {
       const request = await fetch(
         `${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_KEY}&q=${city}`
